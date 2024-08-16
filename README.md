@@ -1,4 +1,4 @@
-#Calculadora de pegada de carbono
+# Calculadora de pegada de carbono
 
 
 Considerando ​um exemplo onde a eletricidade é usada e o consumo de energia é de 1000 kWh. Vamos assumir ​que essa eletricidade vem da rede elétrica mundial, com um fator de emissão médio de 0,475 kg ​CO₂/kWh.
