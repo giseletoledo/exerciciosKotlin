@@ -23,7 +23,7 @@ a pegada de carbono para cada tipo de energia inserido e, ao final, apresentar o
 | Gás: 50 kWh/m³                        | Gás: 100 kg CO₂              |
 |                                       | Total: 147.50 kg CO₂         |
 
-#### CalculadoraPegadaCarbono.kt
+#### CalculadoraPegadaCO.kt
 
 2. Desenvolva um programa que solicite ao usuário a distância percorrida e o meio de transporte utilizado para várias viagens (carro, ônibus e avião). Utilize fatores de emissão específicos para cada tipo de veículo: carro (0.21 kg CO₂/km), ônibus (0.105 kg CO₂/km), avião (0.133 kg CO₂/km). Armazene esses dados em vetores e utilize uma matriz para acessar os fatores de emissão. Implemente funções que calculem a pegada de carbono de cada viagem e a soma total. Ao final, exiba o total da pegada de carbono
 
@@ -35,4 +35,17 @@ Trabalhar funções, vetores e matrizes
 | Carro: 100 km        | Pegada de CO₂: 21 kg    |
 
 #### CalculadoraEmissao.kt
+
+
+3. Desenvolva um programa que leia um arquivo de texto contendo itens de consumo (alimentos, produtos diversos), suas respectivas quantidades. Utilize o operador Elvis para fornecer valores padrão quando os dados estão ausentes e a função let para garantir operações seguras com variáveis não nulas. Implemente tratamento de exceções para lidar com possíveis erros de leitura ou formato incorreto dos dados. O programa deve calcular a pegada de carbono para cada item listado, acumular o valor total e exibir a pegada de carbono total ao final.
+
+OBJETIVOS
+Utilizar a função LET, operador elvis, leitura de dados e tratamento de exceções.
+
+| ENTRADA                              | SAÍDA             |
+|--------------------------------------|-------------------|
+|Arquivo txt (Arroz: 200g, Feijão 400g)| Total: 1.1 kg CO2 |
+
+#### CalculadoraPegadaCarbono.kt
+
 
