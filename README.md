@@ -30,11 +30,9 @@ a pegada de carbono para cada tipo de energia inserido e, ao final, apresentar o
 OBJETIVOS
 Trabalhar funções, vetores e matrizes
 
-ENTRADA
-Carro: 100 km
-
-SAÍDA
-Pegada de CO₂: 21 kg
+| Entrada              | Saída                   |
+|----------------------|-------------------------|
+| Carro: 100 km        | Pegada de CO₂: 21 kg    |
 
 #### CalculadoraEmissao.kt
 
