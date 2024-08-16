@@ -1,4 +1,4 @@
-class CalculadoraPegadaCarbono {
+class CalculadoraPegadaCO {
 
     private val fatorEletricidade = 0.475 // kg CO2/kWh
     private val fatorGas = 2.0            // kg CO2/m³

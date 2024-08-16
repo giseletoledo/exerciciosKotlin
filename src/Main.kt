@@ -1,8 +1,11 @@
+import CalculadoraArquivo.CalculadoraPegadaCarbono
+import java.io.File
+import java.io.FileNotFoundException
 import java.util.*
 
 fun main() {
    /* val scanner = Scanner(System.`in`)
-    val calculadora = CalculadoraPegadaCarbono()
+    val calculadora = CalculadoraPegadaCO()
 
     println("Qual tipo de energia (eletricidade ou gás natural)?")
     val tipoEnergia = scanner.nextLine()
@@ -19,7 +22,7 @@ fun main() {
         println("Erro: ${e.message}")
     }*/
 
-    val calculadora = CalculadoraEmissao()
+  /*  val calculadora = CalculadoraEmissao()
 
     print("Quantas viagens você deseja calcular? ")
     val numViagens = readLine()!!.toInt()
@@ -45,5 +48,34 @@ fun main() {
         totalEmissao += calculadora.calcularEmissao(distancia, meioTransporte)
     }
 
-    println("A pegada de carbono total é: $totalEmissao kg CO2")
+    println("A pegada de carbono total é: $totalEmissao kg CO2")*/
+
+    val calculadora = CalculadoraPegadaCarbono()
+
+    var totalPegadaCarbono = 0.0
+
+    try {
+        val linhas = File("src/resources/itens_consumo.txt").readLines()
+
+        for (linha in linhas) {
+            val partes = linha.split(":")
+            val item = partes.getOrNull(0)?.trim()?.lowercase() ?: "item desconhecido"
+            val quantidadeStr = partes.getOrNull(1)?.trim()?.replace("g", "") ?: "0"
+
+            val quantidade = quantidadeStr.toDoubleOrNull() ?: 0.0
+
+            val pegadaCarbono = calculadora.calcularPegadaCarbono(item, quantidade)
+            totalPegadaCarbono += pegadaCarbono
+
+            println("$item: ${pegadaCarbono} kg CO2")
+        }
+
+        println("Pegada de carbono total: $totalPegadaCarbono kg CO2")
+
+    } catch (e: FileNotFoundException) {
+        println("Erro: Arquivo não encontrado.")
+    } catch (e: Exception) {
+        println("Erro ao processar o arquivo: ${e.message}")
+    }
+
 }
